@@ -1,0 +1,42 @@
+.movies__Cntr {
+  width: 100%;
+}
+
+.containerBtn {
+  font-size: 1rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: 500;
+  font-family: $poppin;
+}
+
+.bntReset {
+  font-size: 1.4em;
+  border: none;
+  padding: 0.4em;
+  border-radius: 0.8rem;
+  background-color: $movieBtn;
+  color: $white;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: $poppin;
+}
+
+.section__card {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  @media (min-width: 62em) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}

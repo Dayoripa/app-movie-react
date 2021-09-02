@@ -1,0 +1,19 @@
+.grid__movies {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin-top: 3rem;
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(2, auto);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: 73em) {
+    grid-template-columns: repeat(3, auto);
+    gap: 1.5rem;
+  }
+  @media (min-width: 90em) {
+    grid-template-columns: repeat(4, auto);
+    gap: 1.5rem;
+  }
+}

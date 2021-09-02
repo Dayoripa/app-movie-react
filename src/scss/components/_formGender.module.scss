@@ -1,0 +1,82 @@
+.Gender__cntr {
+  width: 100%;
+  height: 40rem;
+  font-size: 2rem;
+  background-color: $white;
+  border: 0.1rem solid rgba(0, 0, 0, 0.247);
+  margin: 1rem auto;
+  @media (min-width: 30em) {
+    width: 35rem;
+    border-radius: 1rem;
+  }
+}
+
+.gender__title {
+  font-size: 0.8em;
+  font-family: $poppin;
+  font-weight: 500;
+  border-bottom: 0.1rem solid rgba(8, 0, 0, 0.267);
+  padding: 1em 0.6em;
+}
+
+.form__group {
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.form__input {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 0.8em;
+}
+
+.form__input:focus {
+  outline: none;
+  border: 0.1rem solid rgba(129, 126, 126, 0.781);
+  box-shadow: 0 0 5px #a7a6a6af;
+}
+
+.form__button {
+  position: absolute;
+  top: 0.3rem;
+  left: 1rem;
+  border: none;
+  background: none;
+  height: 100%;
+}
+
+.form__gender {
+  margin: 0.5em;
+  font-size: 1em;
+}
+
+.gender__text {
+  font-size: 0.8em;
+  font-family: $poppin;
+  font-weight: 600;
+}
+
+.genders {
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  row-gap: 0.5rem;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+label {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.form__see {
+  font-size: 0.8em;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: blue;
+}

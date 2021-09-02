@@ -1,0 +1,25 @@
+.movieCard {
+  list-style: none;
+  font-size: 1.5rem;
+  width: 25rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  @media (min-width: 30em) {
+    width: 28rem;
+  }
+  @media (min-width: 48em) {
+    width: 25rem;
+    margin-bottom: 0;
+  }
+}
+
+.movieCard:hover {
+  opacity: 0.8;
+}
+
+.movieImage {
+  background-color: azure;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
