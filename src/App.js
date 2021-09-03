@@ -6,8 +6,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Popular } from './components/Popular';
-import { TopRated } from './components/TopRated';
+import { Popular } from './components/popular/Popular';
+import { TopRated } from './components/TopRated'; 
 
 function App() {
   return (

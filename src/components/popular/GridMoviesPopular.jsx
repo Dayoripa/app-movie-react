@@ -1,25 +1,24 @@
 import styles from "./../../scss/style/style.module.scss";
-import { Spinner } from "./Spinner";
+import { Spinner } from "./../../components/movies/Spinner";
 import { useQuery } from "./../../hooks/UseQuery";
 import { useEffect, useState } from "react";
 import { get } from "./../../utility/HttpClient";
-import { CardMovies } from "./CardMovies";
+import { CardMoviesPopular } from "./CardMoviesPopular";
 
-export const MoviesGrid = () => {
+export const GridMoviesPopular = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const query = useQuery();
   const search = query.get("search");
-  console.log(search);
+  //console.log(search);
 
   useEffect(() => {
     setIsLoading(true);
-    const searchUrl = search
-      ? "/search/movie?query=" + search
-      : "/movie/now_playing";
+    const searchUrl = search ? "/search/movie?=" + search : "/movie/popular";
     get(searchUrl).then((data) => {
       console.log(data);
+      console.log(searchUrl);
       setMovies(data.results);
       setIsLoading(false);
     });
@@ -31,7 +30,7 @@ export const MoviesGrid = () => {
   return (
     <ul className={styles.grid__movies}>
       {movies.map((movie) => (
-        <CardMovies key={movie.id} movie={movie} />
+        <CardMoviesPopular key={movie.id} movie={movie} />
       ))}
     </ul>
   );
