@@ -1,11 +1,11 @@
 import styles from "./../../scss/style/style.module.scss";
 import { Spinner } from "./../../components/movies/Spinner";
 import { useQuery } from "./../../hooks/UseQuery";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { get } from "./../../utility/HttpClient";
-import { CardMoviesPopular } from "./CardMoviesPopular";
+import { CardMoviesUpcoming } from "./CardMoviesUpcoming";
 
-export const GridMoviesPopular = () => {
+export const GridMoviesUpcoming = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -15,7 +15,7 @@ export const GridMoviesPopular = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    const searchUrl = search ? "/search/movie?=" + search : "/movie/popular";
+    const searchUrl = search ? "/search/movie?=" + search : "/movie/upcoming";
     get(searchUrl).then((data) => {
       console.log(data);
       console.log(searchUrl);
@@ -28,12 +28,10 @@ export const GridMoviesPopular = () => {
     return <Spinner />;
   }
   return (
-    <Fragment>
-      <ul className={styles.grid__movies}>
-        {movies.map((movie) => (
-          <CardMoviesPopular key={movie.id} movie={movie} />
-        ))}
-      </ul>
-    </Fragment>
+    <ul className={styles.grid__movies}>
+      {movies.map((movie) => (
+        <CardMoviesUpcoming key={movie.id} movie={movie} />
+      ))}
+    </ul>
   );
 };

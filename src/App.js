@@ -7,7 +7,8 @@ import {
   Route,
 } from "react-router-dom";
 import { Popular } from './components/popular/Popular';
-import { TopRated } from './components/TopRated'; 
+import { TopRated } from './components/topRated/TopRated'; 
+import { Upcoming } from './components/upcoming/Upcoming';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
               </Route>
               <Route exact path="/topRated">
                 <TopRated />
+              </Route>
+              <Route exact path="/upcoming">
+                <Upcoming />
               </Route>
               <Route path="/">
                 <Movies />

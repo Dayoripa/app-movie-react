@@ -1,19 +1,21 @@
 .grid__movies {
   width: 100%;
   display: grid;
+  grid-template-columns: 45% 45%;
   justify-content: center;
-  margin-top: 3rem;
-  @media (min-width: 48em) {
-    grid-template-columns: repeat(2, auto);
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-  @media (min-width: 73em) {
+  gap: 0.8rem;
+  position: relative;
+  @media (min-width: 22em) {
     grid-template-columns: repeat(3, auto);
-    gap: 1.5rem;
   }
-  @media (min-width: 90em) {
+  @media (min-width: 80em) {
     grid-template-columns: repeat(4, auto);
-    gap: 1.5rem;
   }
+  // @media (min-width: 79em) {
+  //   grid-template-columns: repeat(5, auto);
+  // }
+  // // @media (min-width: 90em) {
+  //   grid-template-columns: repeat(4, auto);
+  //   gap: 1.5rem;
+  // }
 }

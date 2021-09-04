@@ -5,9 +5,12 @@
   background-color: $white;
   border: 0.1rem solid rgba(0, 0, 0, 0.247);
   margin: 1rem auto;
-  @media (min-width: 30em) {
+  display: none;
+  @media (min-width: 62em) {
+    display: block;
     width: 35rem;
     border-radius: 1rem;
+    margin-right: 1rem;
   }
 }
 

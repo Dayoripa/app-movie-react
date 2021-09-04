@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
 import styles from "./../../scss/style/style.module.scss";
 import { GoCalendar } from "react-icons/go";
+import { Link } from "react-router-dom";
 
-export const CardMoviesPopular = ({ movie }) => {
+export const CardMoviesTopRated = ({ movie }) => {
   const imageUrl = "https://image.tmdb.org/t/p/w300" + movie.poster_path;
 
   return (
     <li className={styles.movieCard}>
-      <Link Link to={"/movies/" + movie.id} className={styles.card__link}>
+      <Link to={"/movies/" + movie.id} className={styles.card__link}>
         <img
           width={230}
           height={345}
@@ -26,5 +26,3 @@ export const CardMoviesPopular = ({ movie }) => {
     </li>
   );
 };
-
-// https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1

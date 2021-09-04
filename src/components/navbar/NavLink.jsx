@@ -48,7 +48,7 @@ export const NavLinks = (props) => {
         onClick={() => props.isMobile && props.closeMobileMenu()}
         className={styles.navbar__list}
       >
-        <Link to="/Upcoming" className={styles.link}>
+        <Link to="/upcoming" className={styles.link}>
           Upcoming
         </Link>
       </motion.li>
